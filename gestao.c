@@ -25,7 +25,7 @@ int turmaIsCheia(Turma *turma)
 
 void insereAlunoNaTurma(Turma *turma, Aluno *aluno)
 {
-    if(turmaIsCheia == STACK_ISFULL)
+    if(turmaIsCheia(turma))
     {
         printf("Erro ao inserir: Turma Cheia!");
     }
@@ -33,6 +33,9 @@ void insereAlunoNaTurma(Turma *turma, Aluno *aluno)
     {
         turma->topo++;
     }
-
 }
 
+int tamanhoDaTurma(Turma *turma)
+{
+    return (turma->topo + 1);
+}
