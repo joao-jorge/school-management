@@ -42,6 +42,8 @@ int turmaIsCheia(Turma *turma);
 
 void insereAlunoNaTurma(Turma *turma, Aluno *aluno);
 
+int tamanhoDaTurma(Turma *turma);
+
 
 
 
