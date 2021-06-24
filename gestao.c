@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "gestao.h"
 
-void inicilizar_turma(Turma *turma)
+void inicilizarTurma(Turma *turma)
 {
     turma->topo = -1;
 }
@@ -18,8 +18,21 @@ int turmaIsVazia(Turma *turma)
 int turmaIsCheia(Turma *turma)
 {
     if(turma->topo == TAM-1)
-        return STACK_ISFULL;
+        return 1;
     else
-        return OK;
+        return 0;
+}
+
+void insereAlunoNaTurma(Turma *turma, Aluno *aluno)
+{
+    if(turmaIsCheia == STACK_ISFULL)
+    {
+        printf("Erro ao inserir: Turma Cheia!");
+    }
+    else
+    {
+        turma->topo++;
+    }
+
 }
 
