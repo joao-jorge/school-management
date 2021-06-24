@@ -10,7 +10,7 @@ void inicilizarTurma(Turma *turma)
 int turmaIsVazia(Turma *turma)
 {
     if(turma->topo == -1)
-        return 1;
+        return STACK_ISEMPTY;
     else
         return OK;
 }
@@ -18,9 +18,9 @@ int turmaIsVazia(Turma *turma)
 int turmaIsCheia(Turma *turma)
 {
     if(turma->topo == TAM-1)
-        return 1;
+        return STACK_ISFULL;
     else
-        return 0;
+        return OK;
 }
 
 void insereAlunoNaTurma(Turma *turma, Aluno *aluno)
@@ -39,3 +39,4 @@ int tamanhoDaTurma(Turma *turma)
 {
     return (turma->topo + 1);
 }
+
