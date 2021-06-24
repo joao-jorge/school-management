@@ -34,11 +34,13 @@ typedef struct
 
 
 /* Funcoes da turma */
-void inicilizar_turma(Turma *turma);
+void inicilizarTurma(Turma *turma);
 
 int turmaIsVazia(Turma *turma);
 
 int turmaIsCheia(Turma *turma);
+
+void insereAlunoNaTurma(Turma *turma, Aluno *aluno);
 
 
 
