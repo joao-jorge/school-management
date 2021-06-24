@@ -1,30 +1,50 @@
-#ifndef GESTAO_ESCOLA
-#define GESTAO_ESCOLA
+#ifndef GESTAO_ESCOLA_INCLUDED
+#define GESTAO_ESCOLA_INCLUDED
 
-#define NAME 25
-#define CURSO 25
+#define NOT_FOUND         -1       // Item não existe
+#define OK                 0       // Operação realizada com sucesso
+#define STACK_ISFULL       1       // Pilha cheia
+#define STACK_ISEMPTY      2       // Pilha vazia
+#define TAM                20      // Tamanho do vecto
+#define NAME               25
+#define CURSO              25
 
-#typedef struct 
+typedef struct
 {
-    char[NAME] nome_aluno;
+    char nome_aluno[NAME];
     int numero_aluno;
     int idade;
-    char[CURSO] curso;
+    char curso[CURSO];
     int ano_frequencia;
 }Aluno;
 
-#typedef struct 
+typedef struct
 {
     int id_turma;
     Aluno *alunos;
+    int TItem[TAM];
+    int topo;
 }Turma;
 
-#typedef struct 
+typedef struct
 {
     Turma *turmas;
     int numero_professores;
 }Escola;
 
 
+/* Funcoes da turma */
+void inicilizar_turma(Turma *turma);
 
-#endif GEStAO_ESCOLA
+int turmaIsVazia(Turma *turma);
+
+int turmaIsCheia(Turma *turma);
+
+
+
+
+// Funcoes da escola
+
+
+#endif // GESTAO_ESCOLA_INCLUDED
+
