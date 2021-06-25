@@ -94,8 +94,8 @@ void findStudent(Turma *turma, int num_aluno)
                printf("\nAno de Frequencia: %d\n", turma->alunos[i].ano_frequencia);
            }
        }
-       printf("found status: %d", found);
-       if(found =! FOUND)
+
+       if(found != FOUND)
        {
             printf("Aluno nao encontrado");
        }
