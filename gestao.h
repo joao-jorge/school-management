@@ -50,6 +50,8 @@ void showStudent(Turma *turma, int num_aluno);
 
 int studentExists(Turma *turma, int num_aluno);
 
+void showLastInserted(Turma *turma);
+
 // Funcoes da escola
 
 #endif // GESTAO_ESCOLA_INCLUDED
