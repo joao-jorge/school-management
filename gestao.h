@@ -60,6 +60,8 @@ void showLastInserted(Turma *turma);
 
 void registerStudent(Aluno *alunos);
 
+void listAll(Turma *turma, Aluno *aluno);
+
 // Funcoes da escola
 
 #endif // GESTAO_ESCOLA_INCLUDED
