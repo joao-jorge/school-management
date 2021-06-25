@@ -22,12 +22,17 @@ int main ()
         scanf("%d", &count);
 
     }
-
         printf("PROCURAR UM ALUNO:");
         scanf("%d", &num_aluno);
-        printf("\nstatus: %d\n", studentExists(turma, num_aluno));
         showStudent(turma, num_aluno);
+       // printf("\nstatus: %d\n", studentExists(turma, num_aluno));
+    /*
+
+
         printf("\n\nUltimo inserido");
         showLastInserted(turma);
+        listAll(turma);
+    */
+
 
 }
