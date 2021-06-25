@@ -33,7 +33,6 @@ typedef struct
     int numero_professores;
 }Escola;
 
-
 /* Funcoes da turma */
 void inicilizarTurma(Turma *turma);
 
@@ -47,7 +46,9 @@ int tamanhoDaTurma(Turma *turma);
 
 int removeAlunoNaTurma(Turma *turma);
 
-void findStudent(Turma *turma, int num_aluno);
+void showStudent(Turma *turma, int num_aluno);
+
+int studentExists(Turma *turma, int num_aluno);
 
 // Funcoes da escola
 

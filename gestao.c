@@ -98,6 +98,7 @@ void findStudent(Turma *turma, int num_aluno)
        if(found != FOUND)
        {
             printf("Aluno nao encontrado");
+            
        }
     }
 }
