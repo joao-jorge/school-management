@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "gestao.h"
 
-void inicitializeClass(Turma *turma)
+void initializeClass(Turma *turma)
 {
     turma->topo = -1;
 }
