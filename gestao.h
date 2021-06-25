@@ -34,7 +34,7 @@ typedef struct
 }Escola;
 
 /* Funcoes da turma */
-void inicitializeClass(Turma *turma);
+void initializeClass(Turma *turma);
 
 int classIsEmpty(Turma *turma);
 
