@@ -1,4 +1,3 @@
-
 #ifndef GESTAO_ESCOLA_INCLUDED
 #define GESTAO_ESCOLA_INCLUDED
 
@@ -6,23 +5,24 @@
 #define OK                 0       // Operação realizada com sucesso
 #define STACK_ISFULL       1       // Pilha cheia
 #define STACK_ISEMPTY      2       // Pilha vazia
-#define TAM                20      // Tamanho do vecto
-#define NAME               25
-#define CURSO              25
+#define STACK_TAM          20      // Tamanho do vecto
+
+#define NAME_LENGTH        25
+#define CURSO_LENGTH       25
 
 typedef struct
 {
-    char nome_aluno[NAME];
+    char nome_aluno[NAME_LENGTH];
     int numero_aluno;
     int idade;
-    char curso[CURSO];
+    char curso[CURSO_LENGTH];
     int ano_frequencia;
 }Aluno;
 
 typedef struct
 {
     int id_turma;
-    Aluno alunos[TAM];
+    Aluno alunos[STACK_TAM];
     int topo;
 }Turma;
 
@@ -42,12 +42,9 @@ int turmaIsCheia(Turma *turma);
 
 void insereAlunoNaTurma(Turma *turma, Aluno *aluno);
 
-int removeAlunoNaTurma(Turma *turma);
-
 int tamanhoDaTurma(Turma *turma);
 
-int verTopo(Turma *turma);
-
+int removeAlunoNaTurma(Turma *turma);
 
 
 

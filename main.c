@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "gestao.h"
 
-
 int main ()
 {
     Turma *turma = (Turma*)malloc(sizeof(Turma));
@@ -23,20 +22,4 @@ int main ()
         printf("\n\n----------------------------\n\n");
         count++;
     }
-
-
 }
-
-
-/*
-   Turma *turma = (Turma*)malloc(sizeof(Turma));
-    Escola *escola = (Escola*)malloc(sizeof(Escola));
-    Aluno *aluno = (Aluno*)malloc(sizeof(Aluno));;
-    printf("Turma esta vazia: %d\n", turmaIsVazia(turma));
-    cadastrarAluno(aluno);
-    inicilizarTurma(turma);
-    insereAlunoNaTurma(turma, aluno);
-    printf("Turma: %d\n", turmaIsCheia(turma));
-    printf("Turma esta vazia: %d\n", turmaIsVazia(turma));
-
-*/
