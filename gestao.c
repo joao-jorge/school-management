@@ -72,5 +72,35 @@ void cadastrarAluno(Aluno *alunos)
     printf("Insira o Curso: ");
     scanf("%s", &alunos->curso);
     printf("Insira o Ano de Frequencia: ");
-    scanf("%s", &alunos->ano_frequencia);
+    scanf("%d", &alunos->ano_frequencia);
 }
+
+void findStudent(Turma *turma, int num_aluno)
+{
+    int found = 0;
+    if(turmaIsVazia(turma))
+        printf("Impossivel realizar procura: TURMA ESTA VAZIA!\n");
+    else
+    {
+       for(int i=0; i < turma->topo; i++)
+       {
+           if(num_aluno == turma->alunos[i].numero_aluno)
+           {
+               found = FOUND;
+               printf("\nNome: %s\n", turma->alunos[i].nome_aluno);
+               printf("\nIdade: %d\n", turma->alunos[i].idade);
+               printf("\nCurso: %s\n", turma->alunos[i].curso);
+               printf("\nNumero ID: %d\n", turma->alunos[i].numero_aluno);
+               printf("\nAno de Frequencia: %d\n", turma->alunos[i].ano_frequencia);
+           }
+       }
+       printf("found status: %d", found);
+       if(found =! FOUND)
+       {
+            printf("Aluno nao encontrado");
+       }
+    }
+}
+
+
+
