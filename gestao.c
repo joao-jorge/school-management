@@ -88,7 +88,7 @@ int studentExists(Turma *turma, int num_aluno)
         printf("Impossivel realizar procura: TURMA ESTA VAZIA!\n");
     else
     {
-       for(int i=0; i < turma->topo; i++)
+       for(int i=0; i < turma->topo+1; i++)
        {
            if(num_aluno == turma->alunos[i].numero_aluno)
                status = FOUND;
@@ -103,7 +103,7 @@ void showStudent(Turma *turma, int num_aluno)
 {
        if(studentExists(turma, num_aluno) == FOUND)
        {
-           for(int i=0; i < turma->topo; i++)
+           for(int i=0; i < turma->topo+1; i++)
            {
                if(num_aluno == turma->alunos[i].numero_aluno)
                {
@@ -118,3 +118,20 @@ void showStudent(Turma *turma, int num_aluno)
        else
            printf("Estudante nao existe");
 }
+
+void listAll(Turma *turma)
+{
+    if(classIsEmpty(turma))
+        printf("A turma nao tem alunos");
+    else
+    {
+        for(int i=0; i<turma->topo+1; i++)
+        {
+            printf("\nNome: %s - ", turma->alunos[i].nome_aluno);
+            printf("Numero: %d\n", turma->alunos[i].numero_aluno);
+        }
+    }
+}
+
+
+
