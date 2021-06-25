@@ -24,7 +24,9 @@ int main ()
     }
         printf("PROCURAR UM ALUNO:");
         scanf("%d", &num_aluno);
-        showStudent(turma, num_aluno);
+        printf("Estudante mais velho: %d", mostAgedStudent(turma));
+
+        //showStudent(turma, num_aluno);
        // printf("\nstatus: %d\n", studentExists(turma, num_aluno));
     /*
 

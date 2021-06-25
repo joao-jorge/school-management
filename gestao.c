@@ -26,9 +26,7 @@ int classIsFull(Turma *turma)
 void insertStudent(Turma *turma, Aluno *aluno)
 {
     if(classIsFull(turma))
-    {
         printf("Erro ao inserir: Turma Cheia!\n");
-    }
     else
     {
         turma->topo++;
@@ -131,6 +129,21 @@ void listAll(Turma *turma)
             printf("Numero: %d\n", turma->alunos[i].numero_aluno);
         }
     }
+}
+
+int mostAgedStudent(Turma *turma)
+{   int aux = turma->alunos[0].idade;
+    if(classIsEmpty(turma))
+        printf("Turma esta vazia, impossivel realizar esta operacao");
+    else
+    {
+        for(int i=0; i < turma->topo+1; i++)
+        {
+            if(aux < turma->alunos[i].idade)
+                aux = turma->alunos[i].idade;
+        }
+    }
+    return aux;
 }
 
 

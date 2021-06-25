@@ -62,6 +62,8 @@ void registerStudent(Aluno *alunos);
 
 void listAll(Turma *turma);
 
+int mostAgedStudent(Turma *turma);
+
 // Funcoes da escola
 
 #endif // GESTAO_ESCOLA_INCLUDED
