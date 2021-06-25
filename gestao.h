@@ -34,17 +34,17 @@ typedef struct
 }Escola;
 
 /* Funcoes da turma */
-void inicilizarTurma(Turma *turma);
+void inicitializeClass(Turma *turma);
 
-int turmaIsVazia(Turma *turma);
+int classIsEmpty(Turma *turma);
 
-int turmaIsCheia(Turma *turma);
+int classIsFull(Turma *turma);
 
-void insereAlunoNaTurma(Turma *turma, Aluno *aluno);
+void insertStudent(Turma *turma, Aluno *aluno);
 
-int tamanhoDaTurma(Turma *turma);
+int classSize(Turma *turma);
 
-int removeAlunoNaTurma(Turma *turma);
+int removeStudent(Turma *turma);
 
 void showStudent(Turma *turma, int num_aluno);
 
