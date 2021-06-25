@@ -60,7 +60,7 @@ void showLastInserted(Turma *turma);
 
 void registerStudent(Aluno *alunos);
 
-void listAll(Turma *turma, Aluno *aluno);
+void listAll(Turma *turma);
 
 // Funcoes da escola
 
