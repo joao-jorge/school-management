@@ -9,15 +9,14 @@ int main ()
     Aluno *aluno = (Aluno*)malloc(sizeof(Aluno));;
 
 
-    inicilizarTurma(turma);
+    initializeClass(turma);
     int count = 0;
      int num_aluno;
     while(count != 9)
     {
-        cadastrarAluno(aluno);
-        insereAlunoNaTurma(turma, aluno);
-        printf("Topo: %d\n", verTopo(turma));
-        printf("Tamanho atual da turma: %d", tamanhoDaTurma(turma));
+        registerStudent(aluno);
+        insertStudent(turma, aluno);
+        printf("Tamanho atual da turma: %d", classSize(turma));
         printf("\n\n----------------------------\n\n");
         printf("terminar? ");
         scanf("%d", &count);
@@ -28,5 +27,7 @@ int main ()
         scanf("%d", &num_aluno);
         printf("\nstatus: %d\n", studentExists(turma, num_aluno));
         showStudent(turma, num_aluno);
+        printf("\n\nUltimo inserido");
+        showLastInserted(turma);
 
 }

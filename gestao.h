@@ -44,6 +44,9 @@ void insertStudent(Turma *turma, Aluno *aluno);
 
 int classSize(Turma *turma);
 
+
+/* Funcoes dos estudantes */
+
 int removeStudent(Turma *turma);
 
 void showStudent(Turma *turma, int num_aluno);
@@ -51,6 +54,8 @@ void showStudent(Turma *turma, int num_aluno);
 int studentExists(Turma *turma, int num_aluno);
 
 void showLastInserted(Turma *turma);
+
+void registerStudent(Aluno *alunos);
 
 // Funcoes da escola
 

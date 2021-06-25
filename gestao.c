@@ -56,17 +56,17 @@ int removeStudent(Turma *turma)
 
 void showLastInserted(Turma *turma)
 {
-    printf("Nome : %s\nIdade: %d\nNumero de ID: %d\nCurso: %s\nAno de Frequencia: %d", 
-    turma->alunos[turma->topo].nome_aluno, 
+    printf("Nome : %s\nIdade: %d\nNumero de ID: %d\nCurso: %s\nAno de Frequencia: %d",
+    turma->alunos[turma->topo].nome_aluno,
     turma->alunos[turma->topo].idade,
     turma->alunos[turma->topo].numero_aluno,
     turma->alunos[turma->topo].curso,
     turma->alunos[turma->topo].ano_frequencia);
-     
+
 }
 
 // FUNÇÓES DOS ALUNOS
-void cadastrarAluno(Aluno *alunos)
+void registerStudent(Aluno *alunos)
 {
     printf("Insira o Nome: ");
     scanf("%s", &alunos->nome_aluno);
@@ -118,6 +118,3 @@ void showStudent(Turma *turma, int num_aluno)
        else
            printf("Estudante nao existe");
 }
-
-
-
