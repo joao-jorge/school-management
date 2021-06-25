@@ -1,3 +1,4 @@
+
 #ifndef GESTAO_ESCOLA_INCLUDED
 #define GESTAO_ESCOLA_INCLUDED
 
@@ -21,8 +22,7 @@ typedef struct
 typedef struct
 {
     int id_turma;
-    Aluno *alunos;
-    int TItem[TAM];
+    Aluno alunos[TAM];
     int topo;
 }Turma;
 
@@ -42,7 +42,11 @@ int turmaIsCheia(Turma *turma);
 
 void insereAlunoNaTurma(Turma *turma, Aluno *aluno);
 
+int removeAlunoNaTurma(Turma *turma);
+
 int tamanhoDaTurma(Turma *turma);
+
+int verTopo(Turma *turma);
 
 
 

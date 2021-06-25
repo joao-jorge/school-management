@@ -32,6 +32,7 @@ void insereAlunoNaTurma(Turma *turma, Aluno *aluno)
     else
     {
         turma->topo++;
+        turma->alunos[turma->topo] = *aluno;
     }
 }
 
@@ -39,4 +40,40 @@ int tamanhoDaTurma(Turma *turma)
 {
     return (turma->topo + 1);
 }
+
+int removeAlunoNaTurma(Turma *turma)
+{
+    Aluno aux;
+    if(turmaIsVazia(turma))
+    {
+        printf("Pilha esta vazia");
+    }
+    else
+    {
+
+    }
+}
+
+int verTopo(Turma *turma)
+{
+    return turma->alunos[turma->topo].idade;
+}
+
+// FUNÇÓES DOS ALUNOS
+
+void cadastrarAluno(Aluno *alunos)
+{
+    printf("Insira o Nome: ");
+    scanf("%s", &alunos->nome_aluno);
+    printf("Insira a idade: ");
+    scanf("%d", &alunos->idade);
+    printf("Insira o Numero: ");
+    scanf("%d", &alunos->numero_aluno);
+    printf("Insira o Curso: ");
+    scanf("%s", &alunos->curso);
+    printf("Insira o Ano de Frequencia: ");
+    scanf("%s", &alunos->ano_frequencia);
+}
+
+
 

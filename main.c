@@ -2,14 +2,41 @@
 #include <stdlib.h>
 #include "gestao.h"
 
+
 int main ()
 {
     Turma *turma = (Turma*)malloc(sizeof(Turma));
-    Escola *escola = (Escola*)malloc(sizeof(Escola));;
+    Escola *escola = (Escola*)malloc(sizeof(Escola));
+    Aluno *aluno = (Aluno*)malloc(sizeof(Aluno));;
 
 
     inicilizarTurma(turma);
-    printf("Turma: %d\n", turmaIsCheia(turma));
-    printf("Turma: %d\n", turmaIsVazia(turma));
+    int count = 0;
+    while(count < 3)
+    {
+        if(count == 2)
+            pop();
+        cadastrarAluno(aluno);
+        insereAlunoNaTurma(turma, aluno);
+        printf("Topo: %d\n", verTopo(turma));
+        printf("Tamanho atual da turma: %d", tamanhoDaTurma(turma));
+        printf("\n\n----------------------------\n\n");
+        count++;
+    }
+
 
 }
+
+
+/*
+   Turma *turma = (Turma*)malloc(sizeof(Turma));
+    Escola *escola = (Escola*)malloc(sizeof(Escola));
+    Aluno *aluno = (Aluno*)malloc(sizeof(Aluno));;
+    printf("Turma esta vazia: %d\n", turmaIsVazia(turma));
+    cadastrarAluno(aluno);
+    inicilizarTurma(turma);
+    insereAlunoNaTurma(turma, aluno);
+    printf("Turma: %d\n", turmaIsCheia(turma));
+    printf("Turma esta vazia: %d\n", turmaIsVazia(turma));
+
+*/
