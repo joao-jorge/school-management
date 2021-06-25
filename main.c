@@ -5,16 +5,16 @@
 int main ()
 {
     Turma *turma = (Turma*)malloc(sizeof(Turma));
-    Escola *escola = (Escola*)malloc(sizeof(Escola));
+    //Escola *escola = (Escola*)malloc(sizeof(Escola));
     Aluno *aluno = (Aluno*)malloc(sizeof(Aluno));;
 
 
     inicilizarTurma(turma);
     int count = 0;
-    while(count < 3)
+    while(count < 4)
     {
         if(count == 2)
-            pop();
+            removeAlunoNaTurma(turma);
         cadastrarAluno(aluno);
         insereAlunoNaTurma(turma, aluno);
         printf("Topo: %d\n", verTopo(turma));

@@ -5,6 +5,7 @@
 #define OK                 0       // Operação realizada com sucesso
 #define STACK_ISFULL       1       // Pilha cheia
 #define STACK_ISEMPTY      2       // Pilha vazia
+#define FOUND              3       // Encontrado
 #define STACK_TAM          20      // Tamanho do vecto
 
 #define NAME_LENGTH        25
@@ -46,10 +47,9 @@ int tamanhoDaTurma(Turma *turma);
 
 int removeAlunoNaTurma(Turma *turma);
 
-
+void findStudent(Turma *turma, int num_aluno);
 
 // Funcoes da escola
-
 
 #endif // GESTAO_ESCOLA_INCLUDED
 
