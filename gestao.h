@@ -6,10 +6,13 @@
 #define STACK_ISFULL       1       // Pilha cheia
 #define STACK_ISEMPTY      2       // Pilha vazia
 #define FOUND              3       // Encontrado
-#define STACK_TAM          20      // Tamanho do vecto
+
 
 #define NAME_LENGTH        25
 #define CURSO_LENGTH       25
+
+#define SCHOOL_TAM         10
+#define STACK_TAM          20
 
 typedef struct
 {
@@ -29,7 +32,7 @@ typedef struct
 
 typedef struct
 {
-    Turma *turmas;
+    Turma turmas[SCHOOL_TAM];
     int numero_professores;
 }Escola;
 
