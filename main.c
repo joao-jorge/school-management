@@ -11,15 +11,22 @@ int main ()
 
     inicilizarTurma(turma);
     int count = 0;
-    while(count < 4)
+     int num_aluno;
+    while(count != 9)
     {
-        if(count == 2)
-            removeAlunoNaTurma(turma);
         cadastrarAluno(aluno);
         insereAlunoNaTurma(turma, aluno);
         printf("Topo: %d\n", verTopo(turma));
         printf("Tamanho atual da turma: %d", tamanhoDaTurma(turma));
         printf("\n\n----------------------------\n\n");
-        count++;
+        printf("terminar? ");
+        scanf("%d", &count);
+
     }
+
+        printf("PROCURAR UM ALUNO:");
+        scanf("%d", &num_aluno);
+        printf("\nstatus: %d\n", studentExists(turma, num_aluno));
+        showStudent(turma, num_aluno);
+
 }
