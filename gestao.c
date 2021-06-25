@@ -17,7 +17,7 @@ int turmaIsVazia(Turma *turma)
 
 int turmaIsCheia(Turma *turma)
 {
-    if(turma->topo == TAM-1)
+    if(turma->topo == STACK_TAM-1)
         return STACK_ISFULL;
     else
         return OK;
@@ -27,7 +27,7 @@ void insereAlunoNaTurma(Turma *turma, Aluno *aluno)
 {
     if(turmaIsCheia(turma))
     {
-        printf("Erro ao inserir: Turma Cheia!");
+        printf("Erro ao inserir: Turma Cheia!\n");
     }
     else
     {
@@ -43,14 +43,14 @@ int tamanhoDaTurma(Turma *turma)
 
 int removeAlunoNaTurma(Turma *turma)
 {
-    Aluno aux;
     if(turmaIsVazia(turma))
     {
-        printf("Pilha esta vazia");
+        printf("Pilha esta vazia\n");
     }
     else
     {
-
+        printf("Aluno a ser removido: %s\n", turma->alunos[turma->topo].nome_aluno);
+        turma->topo--;
     }
 }
 
@@ -74,6 +74,3 @@ void cadastrarAluno(Aluno *alunos)
     printf("Insira o Ano de Frequencia: ");
     scanf("%s", &alunos->ano_frequencia);
 }
-
-
-
