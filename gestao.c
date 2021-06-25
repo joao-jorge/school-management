@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include "gestao.h"
 
-void inicilizarTurma(Turma *turma)
+void inicitializeClass(Turma *turma)
 {
     turma->topo = -1;
 }
 
-int turmaIsVazia(Turma *turma)
+int classIsEmpty(Turma *turma)
 {
     if(turma->topo == -1)
         return STACK_ISEMPTY;
@@ -15,7 +15,7 @@ int turmaIsVazia(Turma *turma)
         return OK;
 }
 
-int turmaIsCheia(Turma *turma)
+int classIsFull(Turma *turma)
 {
     if(turma->topo == STACK_TAM-1)
         return STACK_ISFULL;
@@ -23,9 +23,9 @@ int turmaIsCheia(Turma *turma)
         return OK;
 }
 
-void insereAlunoNaTurma(Turma *turma, Aluno *aluno)
+void insertStudent(Turma *turma, Aluno *aluno)
 {
-    if(turmaIsCheia(turma))
+    if(classIsFull(turma))
     {
         printf("Erro ao inserir: Turma Cheia!\n");
     }
@@ -36,14 +36,14 @@ void insereAlunoNaTurma(Turma *turma, Aluno *aluno)
     }
 }
 
-int tamanhoDaTurma(Turma *turma)
+int classSize(Turma *turma)
 {
     return (turma->topo + 1);
 }
 
-int removeAlunoNaTurma(Turma *turma)
+int removeStudent(Turma *turma)
 {
-    if(turmaIsVazia(turma))
+    if(classIsEmpty(turma))
     {
         printf("Pilha esta vazia\n");
     }
@@ -54,9 +54,15 @@ int removeAlunoNaTurma(Turma *turma)
     }
 }
 
-int verTopo(Turma *turma)
+void showLastInserted(Turma *turma)
 {
-    return turma->alunos[turma->topo].idade;
+    printf("Nome : %s\nIdade: %d\nNumero de ID: %d\nCurso: %s\nAno de Frequencia: %d", 
+    turma->alunos[turma->topo].nome_aluno, 
+    turma->alunos[turma->topo].idade,
+    turma->alunos[turma->topo].numero_aluno,
+    turma->alunos[turma->topo].curso,
+    turma->alunos[turma->topo].ano_frequencia);
+     
 }
 
 // FUNÇÓES DOS ALUNOS
