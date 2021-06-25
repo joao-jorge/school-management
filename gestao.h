@@ -62,7 +62,9 @@ void registerStudent(Aluno *alunos);
 
 void listAll(Turma *turma);
 
-int mostAgedStudent(Turma *turma);
+int highestAge(Turma *turma);
+
+void showMostAgedStudent(Turma *turma);
 
 // Funcoes da escola
 

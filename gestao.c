@@ -2,149 +2,39 @@
 #include <stdlib.h>
 #include "gestao.h"
 
-void initializeClass(Turma *turma)
+int main ()
 {
-    turma->topo = -1;
-}
+    Turma *turma = (Turma*)malloc(sizeof(Turma));
+    //Escola *escola = (Escola*)malloc(sizeof(Escola));
+    Aluno *aluno = (Aluno*)malloc(sizeof(Aluno));;
 
-int classIsEmpty(Turma *turma)
-{
-    if(turma->topo == -1)
-        return STACK_ISEMPTY;
-    else
-        return OK;
-}
 
-int classIsFull(Turma *turma)
-{
-    if(turma->topo == STACK_TAM-1)
-        return STACK_ISFULL;
-    else
-        return OK;
-}
-
-void insertStudent(Turma *turma, Aluno *aluno)
-{
-    if(classIsFull(turma))
-        printf("Erro ao inserir: Turma Cheia!\n");
-    else
+    initializeClass(turma);
+    int count = 0;
+     int num_aluno;
+    while(count != 9)
     {
-        turma->topo++;
-        turma->alunos[turma->topo] = *aluno;
+        registerStudent(aluno);
+        insertStudent(turma, aluno);
+        printf("Tamanho atual da turma: %d", classSize(turma));
+        printf("\n\n----------------------------\n\n");
+        printf("terminar? ");
+        scanf("%d", &count);
+
     }
-}
+        printf("PROCURAR UM ALUNO:");
+        scanf("%d", &num_aluno);
+        printf("Estudante mais velho: %d", highestAge(turma));
 
-int classSize(Turma *turma)
-{
-    return (turma->topo + 1);
-}
+        //showStudent(turma, num_aluno);
+       // printf("\nstatus: %d\n", studentExists(turma, num_aluno));
+    /*
 
-int removeStudent(Turma *turma)
-{
-    if(classIsEmpty(turma))
-    {
-        printf("Pilha esta vazia\n");
-    }
-    else
-    {
-        printf("Aluno a ser removido: %s\n", turma->alunos[turma->topo].nome_aluno);
-        turma->topo--;
-    }
-}
 
-void showLastInserted(Turma *turma)
-{
-    printf("Nome : %s\nIdade: %d\nNumero de ID: %d\nCurso: %s\nAno de Frequencia: %d",
-    turma->alunos[turma->topo].nome_aluno,
-    turma->alunos[turma->topo].idade,
-    turma->alunos[turma->topo].numero_aluno,
-    turma->alunos[turma->topo].curso,
-    turma->alunos[turma->topo].ano_frequencia);
+        printf("\n\nUltimo inserido");
+        showLastInserted(turma);
+        listAll(turma);
+    */
+
 
 }
-
-// FUNÇÓES DOS ALUNOS
-void registerStudent(Aluno *alunos)
-{
-    printf("Insira o Nome: ");
-    scanf("%s", &alunos->nome_aluno);
-    printf("Insira a idade: ");
-    scanf("%d", &alunos->idade);
-    printf("Insira o Numero: ");
-    scanf("%d", &alunos->numero_aluno);
-    printf("Insira o Curso: ");
-    scanf("%s", &alunos->curso);
-    printf("Insira o Ano de Frequencia: ");
-    scanf("%d", &alunos->ano_frequencia);
-}
-
-
-int studentExists(Turma *turma, int num_aluno)
-{
-    int status = 0;
-    if(classIsEmpty(turma))
-        printf("Impossivel realizar procura: TURMA ESTA VAZIA!\n");
-    else
-    {
-       for(int i=0; i < turma->topo+1; i++)
-       {
-           if(num_aluno == turma->alunos[i].numero_aluno)
-               status = FOUND;
-       }
-       if(status != FOUND)
-            status = NOT_FOUND;
-    }
-    return status;
-}
-
-void showStudent(Turma *turma, int num_aluno)
-{
-       if(studentExists(turma, num_aluno) == FOUND)
-       {
-           for(int i=0; i < turma->topo+1; i++)
-           {
-               if(num_aluno == turma->alunos[i].numero_aluno)
-               {
-                   printf("\nNome: %s\n", turma->alunos[i].nome_aluno);
-                   printf("\nIdade: %d\n", turma->alunos[i].idade);
-                   printf("\nCurso: %s\n", turma->alunos[i].curso);
-                   printf("\nNumero ID: %d\n", turma->alunos[i].numero_aluno);
-                   printf("\nAno de Frequencia: %d\n", turma->alunos[i].ano_frequencia);
-               }
-           }
-       }
-       else
-           printf("Estudante nao existe");
-}
-
-void listAll(Turma *turma)
-{
-    if(classIsEmpty(turma))
-        printf("A turma nao tem alunos");
-    else
-    {
-        for(int i=0; i<turma->topo+1; i++)
-        {
-            printf("\nNome: %s - ", turma->alunos[i].nome_aluno);
-            printf("Numero: %d\n", turma->alunos[i].numero_aluno);
-        }
-    }
-}
-
-int mostAgedStudent(Turma *turma)
-{   int aux = turma->alunos[0].idade;
-    if(classIsEmpty(turma))
-        printf("Turma esta vazia, impossivel realizar esta operacao");
-    else
-    {
-        for(int i=0; i < turma->topo+1; i++)
-        {
-            if(aux < turma->alunos[i].idade)
-                aux = turma->alunos[i].idade;
-        }
-    }
-    return aux;
-}
-
-
-
