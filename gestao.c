@@ -84,7 +84,7 @@ void cadastrarAluno(Aluno *alunos)
 int studentExists(Turma *turma, int num_aluno)
 {
     int status = 0;
-    if(turmaIsVazia(turma))
+    if(classIsEmpty(turma))
         printf("Impossivel realizar procura: TURMA ESTA VAZIA!\n");
     else
     {
