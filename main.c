@@ -7,16 +7,12 @@ int main ()
 {
     setlocale(LC_ALL, "Portuguese");
     Turma *turma = (Turma*)malloc(sizeof(Turma));
-<<<<<<< HEAD
     Turma *turmaB = (Turma*)malloc(sizeof(Turma));
-=======
->>>>>>> 399da570fb11700c7f737cd9e4c757daccd08866
     //Escola *escola = (Escola*)malloc(sizeof(Escola));
     Aluno *aluno = (Aluno*)malloc(sizeof(Aluno));;
 
 
     initializeClass(turma);
-<<<<<<< HEAD
     initializeClass(turmaB);
     int count = 0;
     int adv = 0;
@@ -34,28 +30,6 @@ int main ()
             printf("\nA turma esta cheia\n");
         else
             printf("\nEstudante Matriculado com sucesso\n");
-=======
-    int count = 0;
-     int num_aluno;
-    while(count != 9)
-    {
-        registerStudent(aluno);
-        insertStudent(turma, aluno);
-        printf("Tamanho atual da turma: %d", classSize(turma));
-        printf("\n\n----------------------------\n\n");
-        printf("terminar? ");
-        scanf("%d", &count);
-
-    }
-        printf("PROCURAR UM ALUNO:");
-        scanf("%d", &num_aluno);
-        printf("Estudante mais velho: %d", mostAgedStudent(turma));
-
-        //showStudent(turma, num_aluno);
-       // printf("\nstatus: %d\n", studentExists(turma, num_aluno));
-    /*
-
->>>>>>> 399da570fb11700c7f737cd9e4c757daccd08866
 
         printf("\n\nUltimo inserido");
         showLastInserted(turma);
@@ -63,7 +37,6 @@ int main ()
     */
 
 
-<<<<<<< HEAD
         adv++;
        // printf("Tamanho atual da turma: %d", classSize(turma));
        // printf("\n\n----------------------------\n\n");
@@ -104,6 +77,3 @@ int main ()
         printf("\n\n\n------- TURMA B\n");
         listAll(turmaB);
 }
-=======
-}
->>>>>>> 399da570fb11700c7f737cd9e4c757daccd08866

@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "gestao.h"
 
-<<<<<<< HEAD
 //GOOD
 void initializeClass(Turma *turma)
 {
@@ -64,26 +63,6 @@ void removeStudent(Turma *turma, Turma *turmab, int num_aluno, char operacao)
         insertStudent(&aux, &turma->alunos[turma->topo]);
         removeTop(turma);
     }
-=======
-int main ()
-{
-    Turma *turma = (Turma*)malloc(sizeof(Turma));
-    //Escola *escola = (Escola*)malloc(sizeof(Escola));
-    Aluno *aluno = (Aluno*)malloc(sizeof(Aluno));;
-
-
-    initializeClass(turma);
-    int count = 0;
-     int num_aluno;
-    while(count != 9)
-    {
-        registerStudent(aluno);
-        insertStudent(turma, aluno);
-        printf("Tamanho atual da turma: %d", classSize(turma));
-        printf("\n\n----------------------------\n\n");
-        printf("terminar? ");
-        scanf("%d", &count);
->>>>>>> 399da570fb11700c7f737cd9e4c757daccd08866
 
     if(classSize(turma) > 0)
         {
@@ -110,7 +89,6 @@ int main ()
         scanf("%d", &num_aluno);
         printf("Estudante mais velho: %d", highestAge(turma));
 
-<<<<<<< HEAD
 void showLastInserted(Turma *turma)
 {
     printf("Nome : %s\nIdade: %d\nNumero de ID: %d\nCurso: %s\nAno de Frequencia: %d",
@@ -139,12 +117,6 @@ void registerStudent(Aluno *alunos)
     scanf("%d", &alunos->ano_frequencia);
 
 }
-=======
-        //showStudent(turma, num_aluno);
-       // printf("\nstatus: %d\n", studentExists(turma, num_aluno));
-    /*
-
->>>>>>> 399da570fb11700c7f737cd9e4c757daccd08866
 
         printf("\n\nUltimo inserido");
         showLastInserted(turma);
@@ -248,8 +220,4 @@ void showMostAgedStudent(Turma *turma)
     }
 }
 
-<<<<<<< HEAD
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-=======
-}
->>>>>>> 399da570fb11700c7f737cd9e4c757daccd08866
