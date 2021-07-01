@@ -7,7 +7,6 @@
 #define STACK_ISEMPTY        2
 #define STUDENT_EXISTS       3
 
-
 #define NAME_LENGTH        25
 #define CURSO_LENGTH       25
 
@@ -34,7 +33,8 @@ typedef struct
 {
     Turma turmas[SCHOOL_TAM];
     int numero_professores;
-    int topo;
+    int topo[SCHOOL_TAM+1];
+    int base[SCHOOL_TAM+1];
 }Escola;
 
 typedef enum {
